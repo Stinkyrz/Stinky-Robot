@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/EmikoRobot 
-RUN git clone -b shiken https://github.com/Stinkyrz/Stinky-Robot /root/EmikoRobot
-WORKDIR /root/EmikoRobot
+# Copy Python Requirements to /root/Stinky-Robot 
+RUN git clone -b shiken https://github.com/Stinkyrz/Stinky-Robot /root/Stinky-Robot
+WORKDIR /root/Stinky-Robot
 
-#Copy config file to /root/EmikoRobot/EmikoRobot
-COPY ./EmikoRobot/sample_config.py ./EmikoRobot/config.py* /root/EmikoRobot/EmikoRobot/
+#Copy config file to /root/Stinky-Robot/Stinky-Robot
+COPY ./Stinky-Robot/sample_config.py ./Stinky-Robot/config.py* /root/Stinky-Robot/Stinky-Robot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","EmikoRobot"]
+CMD ["python3","-m","Stinky-Robot"]
