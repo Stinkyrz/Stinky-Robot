@@ -15,7 +15,7 @@ PHOTO = "https://telegra.ph/file/5b3a9fc1ee0fb26381b4d.jpg"
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I'm Stinky Robot.** \n\n"
   TEXT += "⚪ **I'm Working Properly** \n\n"
-  TEXT += f"⚪ **My Master : [sena-ex](https://t.me/excrybaby)** \n\n"
+  TEXT += f"⚪ **My Master : [stinky](https://t.me/Callme_stinky)** \n\n"
   TEXT += f"⚪ **Library Version :** `{telever}` \n\n"
   TEXT += f"⚪ **Telethon Version :** `{tlhver}` \n\n"
   TEXT += f"⚪ **Pyrogram Version :** `{pyrover}` \n\n"
