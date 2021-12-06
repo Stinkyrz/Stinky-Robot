@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://telegra.ph/file/5b3a9fc1ee0fb26381b4d.jpg">
+  <img src="https://telegra.ph/file/ff5dfa1eea3059d88be16.jpg">
 </p>
 
 <h4><p align="center"> STINKY ROBOT </p></h4>
