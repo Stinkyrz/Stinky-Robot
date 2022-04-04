@@ -92,7 +92,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="About Emiko Robot", callback_data="emiko_"),
+        InlineKeyboardButton(text="About Stinky Robot", callback_data="stinky_"),
     ],
     [
         InlineKeyboardButton(text="Get Help", callback_data="help_back"),
@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi I'm Emiko robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"<b>Hi I'm Stinky robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
@@ -356,19 +356,19 @@ def help_button(update, context):
         pass
 
 
-def emiko_about_callback(update, context):
+def stinky_about_callback(update, context):
     query = update.callback_query
-    if query.data == "emiko_":
+    if query.data == "stinky_":
         query.message.edit_text(
-            text="๏ I'm *Emiko*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Stinky*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Emiko's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for EmikoRobot.",
+            "\n\n_Stinky's licensed under the GNU General Public License v3.0_"
+            "\n\n Click on button bellow to get basic help for StinkyRobot.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -378,8 +378,8 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Notes", callback_data="Stinky_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="Stinky_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="Stinky_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="@Stinkysupport"),
+                    InlineKeyboardButton(text="Credits", callback_data="@Callme_stinky"),
                  ],
                  [
                     InlineKeyboardButton(text="Source Code", url="https://github.com/Stinkyrz/Stinky-Robot"),
@@ -408,7 +408,7 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, EmikoRobot now ready to manage your group."
+            "\nCongragulations, StinkyRobot now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -433,15 +433,15 @@ def emiko_about_callback(update, context):
                 [[InlineKeyboardButton(text="Go Back", callback_data="Stinky_")]]
             ),
         )
-    elif query.data == "Stinky_support":
+    elif query.data == "Stinkysupport":
         query.message.edit_text(
-            text="*๏ Emiko support chats*"
+            text="*๏ Stinky support chats*"
             "\nJoin My Support Group/Channel for see or report a problem on Stinky.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/StinkyGroupChatt"),
+                    InlineKeyboardButton(text="Support", url="t.me/Stinkysupport"),
                     InlineKeyboardButton(text="Updates", url="https://t.me/Stinkyrz"),
                  ],
                  [
@@ -809,7 +809,7 @@ def main():
     )
 
     about_callback_handler = CallbackQueryHandler(
-        emiko_about_callback, pattern=r"emiko_", run_async=True
+        stinky_about_callback, pattern=r"stinky_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
